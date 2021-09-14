@@ -1,0 +1,39 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.0.0",
+  "description": "track your Spotify-created playlists with ease",
+  "scripts": {
+    "preci": "rm -rf node_modules",
+    "ci": "yarn install --frozen-lockfile",
+    "build": "npx lerna run build",
+    "lint": "npx lerna run lint",
+    "lint:fix": "npx lerna exec -- yarn lint --fix",
+    "test": "npx lerna run test",
+    "postversion": "git push --atomic --follow-tags",
+    "tag:changed": "npx lerna version",
+    "tag:all": "npx lerna version --force-publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryanPan342/fresh-bread.git"
+  },
+  "keywords": [
+    "Spotify"
+  ],
+  "author": "Bryan Pan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BryanPan342/fresh-bread/issues"
+  },
+  "homepage": "https://github.com/BryanPan342/fresh-bread#readme",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/@fresh-bread/*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
