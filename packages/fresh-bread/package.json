@@ -1,6 +1,6 @@
 {
   "name": "fresh-bread",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A toolkit that lets you track your spotify-created playlists.",
   "main": "lib/index.js",
   "bin": {
