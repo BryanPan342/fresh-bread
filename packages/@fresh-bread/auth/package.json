@@ -1,0 +1,35 @@
+{
+  "name": "@fresh-bread/auth",
+  "version": "0.0.2",
+  "description": "An authentication package to use across fresh-bread",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "compile": "npx tsc --build",
+    "clean": "npx tsc --build --clean",
+    "clean:all": "git clean -fdx",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryanPan342/fresh-bread.git",
+    "directory": "packages/@fresh-bread/auth"
+  },
+  "author": "Bryan Pan",
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.1.0",
+    "querystring": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "typescript": "^4.4.3"
+  }
+}

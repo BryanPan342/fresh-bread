@@ -1,0 +1,5 @@
+# Never save build specific files
+node_modules
+
+# Save Config Files
+!.eslintrc.js

@@ -978,9 +978,9 @@
   integrity sha512-7tFImggNeNBVMsn0vLrpn1H1uPrUBdnARPTpZoitY37ZrdJREzf7I16tMrlK3hen349gr1NYh8CmZQa7CTG6Aw==
 
 "@types/yargs@^17.0.2":
-  version "17.0.2"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.2.tgz#8fb2e0f4cdc7ab2a1a570106e56533f31225b584"
-  integrity sha512-JhZ+pNdKMfB0rXauaDlrIvm+U7V4m03PPOSVoPS66z8gf+G4Z/UW8UlrVIj2MRQOBzuoEvYtjS0bqYwnpZaS9Q==
+  version "17.0.5"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.5.tgz#1e7e59a88420872875842352b73618f5e77e835f"
+  integrity sha512-4HNq144yhaVjJs+ON6A07NEoi9Hh0Rhl/jI9Nt/l/YRjt+T6St/QK3meFARWZ8IgkzoD1LC0PdTdJenlQQi2WQ==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -1680,6 +1680,11 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+data-uri-to-buffer@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-4.0.0.tgz#b5db46aea50f6176428ac05b73be39a57701a64b"
+  integrity sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==
+
 dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
@@ -2168,6 +2173,13 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
+fetch-blob@^3.1.2:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-3.1.3.tgz#a7dca4855e39d3e3c5a1da62d4ee335c37d26012"
+  integrity sha512-ax1Y5I9w+9+JiM+wdHkhBoxew+zG4AJ2SvAD1v1szpddUIiPERVGBxrMcB2ZqW0Y3PP8bOWYv2zqQq1Jp2kqUQ==
+  dependencies:
+    web-streams-polyfill "^3.0.3"
+
 figures@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
@@ -2235,6 +2247,13 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+formdata-polyfill@^4.0.10:
+  version "4.0.10"
+  resolved "https://registry.yarnpkg.com/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz#24807c31c9d402e002ab3d8c720144ceb8848423"
+  integrity sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==
+  dependencies:
+    fetch-blob "^3.1.2"
 
 fs-extra@^9.1.0:
   version "9.1.0"
@@ -3416,6 +3435,15 @@ node-fetch@^2.6.1:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.2.tgz#986996818b73785e47b1965cc34eb093a1d464d0"
   integrity sha512-aLoxToI6RfZ+0NOjmWAgn9+LEd30YCkJKFSyWacNZdEKTit/ZMcKjGkTRo8uWEsnIb/hfKecNPEbln02PdWbcA==
 
+node-fetch@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.1.0.tgz#714f4922dc270239487654eaeeab86b8206cb52e"
+  integrity sha512-QU0WbIfMUjd5+MUzQOYhenAazakV7Irh1SGkWCsRzBwvm4fAhzEUaHMJ6QLP7gWT6WO9/oH2zhKMMGMuIrDyKw==
+  dependencies:
+    data-uri-to-buffer "^4.0.0"
+    fetch-blob "^3.1.2"
+    formdata-polyfill "^4.0.10"
+
 node-gyp@^5.0.2:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-5.1.1.tgz#eb915f7b631c937d282e33aed44cb7a025f62a3e"
@@ -4017,6 +4045,11 @@ query-string@^6.13.8:
     filter-obj "^1.1.0"
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
+
+querystring@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.1.tgz#40d77615bb09d16902a85c3e38aa8b5ed761c2dd"
+  integrity sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -4942,6 +4975,11 @@ wcwidth@^1.0.0:
   dependencies:
     defaults "^1.0.3"
 
+web-streams-polyfill@^3.0.3:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.0.tgz#a6b74026b38e4885869fb5c589e90b95ccfc7965"
+  integrity sha512-EqPmREeOzttaLRm5HS7io98goBgZ7IVz79aDvqjD0kYXLtFZTc0T/U6wHTPKyIjb+MdN7DFIIX6hgdBEpWmfPA==
+
 webidl-conversions@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
@@ -5113,9 +5151,9 @@ yargs@^16.2.0:
     yargs-parser "^20.2.2"
 
 yargs@^17.1.1:
-  version "17.1.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.1.1.tgz#c2a8091564bdb196f7c0a67c1d12e5b85b8067ba"
-  integrity sha512-c2k48R0PwKIqKhPMWjeiF6y2xY/gPMUlro0sgxqXpbOIohWiLNXWslsootttv7E1e73QPAMQSg5FeySbVcpsPQ==
+  version "17.2.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.2.1.tgz#e2c95b9796a0e1f7f3bf4427863b42e0418191ea"
+  integrity sha512-XfR8du6ua4K6uLGm5S6fA+FIJom/MdJcFNVY8geLlp2v8GYbOXD4EB1tPNZsRn4vBzKGMgb5DRZMeWuFc2GO8Q==
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"
