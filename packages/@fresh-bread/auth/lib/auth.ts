@@ -30,7 +30,7 @@ export async function authenticate(): Promise<IAuthentication> {
   return { state, authenticationUrl, code_challenge, code_verifier };
 }
 
-export async function callback(code: string, code_verifier: string) {
+export async function callback(code: string, code_verifier: string): Promise<any> {
   const response = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
@@ -44,6 +44,5 @@ export async function callback(code: string, code_verifier: string) {
       code_verifier,
     }),
   });
-  const {access_token, refresh_token} = await response.json();
-  return {access_token, refresh_token};
+  return await response.json();
 }

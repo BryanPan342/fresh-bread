@@ -1,4 +1,4 @@
-import crypto from 'crypto';
+import {webcrypto as crypto} from 'crypto';
 
 const SPOTIFY_MASK = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~';
 const BYTE_LENGTH = 256;
@@ -10,6 +10,7 @@ const BYTE_LENGTH = 256;
  */
 export function generateRandomString(length: number, mask = SPOTIFY_MASK): string {
   const randomIndices = new Int8Array(length);
+  // @ts-ignore experimental typing
   crypto.getRandomValues(randomIndices);
   const maskLength = Math.min(mask.length, BYTE_LENGTH);
   const scalingFactor = BYTE_LENGTH / maskLength;
@@ -18,7 +19,8 @@ export function generateRandomString(length: number, mask = SPOTIFY_MASK): strin
     `${acc}${mask[Math.floor(Math.abs(randomIndices[i]) / scalingFactor)]}`, '');
 }
 
-function base64UrlEncode(array): string {
+function base64UrlEncode(array: number[]): string {
+  // @ts-ignore deprecated typing
   return btoa(String.fromCharCode.apply(null, new Uint8Array(array)))
     .replace(/\+/g, '-')
     .replace(/\//g, '_')
@@ -39,6 +41,8 @@ export async function generateChallenge(length = 43): Promise<IChallenge> {
 
   const encoder = new TextEncoder();
   const data = encoder.encode(verifier);
+
+  // @ts-ignore experimental typing
   const array = await crypto.subtle.digest('SHA-256', data);
 
   return {
